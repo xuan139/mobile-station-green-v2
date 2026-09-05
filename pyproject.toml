@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mobile-station-green-v2"
 version = "0.1.0"
-description = "隔離重寫的綠能監控後端"
+description = "與舊綠能相容的模組化優化後端"
 requires-python = ">=3.12"
 dependencies = [
   "fastapi>=0.115,<1.0",

@@ -1,0 +1,112 @@
+contract_name: legacy-green-power-compatibility
+contract_version: 1
+recorded_at: "2026-09-05"
+status: draft_requires_aws_and_schema_verification
+
+source_baseline:
+  local_repository: "/Users/lijiaxi/Documents/mobile station"
+  local_branch: dev
+  local_commit: 25572ae90542c5265b14a49dd867456040c60ddc
+  origin_dev_commit: 23b8274a2a708f9b8d4de2a8c46df2dc541bca6d
+  local_divergence:
+    ahead: 1
+    behind: 2
+    working_tree_clean: false
+  aws_deployed_commit: null
+  baseline_ready: false
+  blocking_reason: >-
+    本機 dev、origin/dev 與 AWS 實際部署版本尚未確認為同一基準，
+    不得用單一來源直接宣稱完整相容。
+
+technology_stack:
+  language: Python 3.12
+  database: PostgreSQL
+  database_driver:
+    - psycopg
+    - psycopg-pool
+  message_broker: RabbitMQ
+  message_driver: pika
+  service_manager: systemd
+  scheduler: cron
+  configuration:
+    - environment variables
+    - YAML
+  station_transport: TCP JSON Line
+  device_protocol: Modbus TCP
+  station_durability: SQLite outbox and command journal
+
+production_contract:
+  deployment_root: /opt/mobile-station-cloud
+  virtual_environment: /opt/mobile-station-cloud/.venv
+  api_port: 18000
+  ingress_port: 19000
+  api_prefixes:
+    - /api/v1
+    - /v1
+  rabbitmq:
+    vhost: /ms
+    queues:
+      raw: ms.raw.telemetry
+      parsed: ms.parsed.telemetry
+      parsed_failed: ms.parsed.failed
+      dlq: ms.dlq
+    queue_durable: true
+    message_persistent: true
+    delivery_semantics: at_least_once
+    parser_ack: after_parsed_publish
+    db_writer_ack: after_database_commit
+  database:
+    name: mobile_station
+    schema_fingerprint: null
+    runtime_ddl_allowed_in_v2: false
+    application_role_target: dml_only
+
+green_services:
+  - unit: mobile-station-ingress.service
+    health_port: 18081
+  - unit: mobile-station-parser-worker.service
+    health_port: 18082
+  - unit: mobile-station-db-writer.service
+    health_port: 18083
+  - unit: mobile-station-alert-notify.service
+    health_port: 18084
+  - unit: mobile-station-api.service
+    health_port: 18085
+  - unit: mobile-station-alert-rules-worker.service
+    health_port: 18087
+  - unit: mobile-station-green-power-energy-worker.service
+    health_port: 18088
+  - unit: mobile-station-mode-schedule-worker.service
+    health_port: 18089
+  - unit: mobile-station-command-lifecycle-worker.service
+    health_port: 18090
+
+cron_contract:
+  command: cloud/scripts/manage_telemetry_history_storage.sh
+  modes:
+    - rollup-5m
+    - rollup-15m
+    - rollup-1h
+    - prune
+  required_semantics:
+    - advisory transaction lock
+    - atomic rollup and watermark commit
+    - idempotent rerun
+    - sample_count conservation
+
+compatibility_gates:
+  - confirm_authoritative_source_commit
+  - capture_database_schema_fingerprint
+  - capture_rabbitmq_topology
+  - freeze_api_request_response_fixtures
+  - freeze_telemetry_and_command_envelopes
+  - freeze_worker_state_transitions
+  - freeze_systemd_and_cron_manifests
+  - verify_old_and_v2_results_with_identical_replay
+
+known_drift:
+  - >-
+    cloud/deploy/systemd 與 deploy/cloud/aws/systemd 為兩套服務範本，
+    目前服務清單不完全一致；V2 必須產生單一權威部署清單。
+  - >-
+    DB Writer 設有批次參數，但現行程序逐筆取得訊息並以單筆清單呼叫批次函式。

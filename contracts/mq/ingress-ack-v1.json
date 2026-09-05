@@ -1,0 +1,8 @@
+{
+  "message_id": "test-green-power-main",
+  "message_type": "ack",
+  "received_at": "2026-06-24T14:21:01.100000+08:00",
+  "sequence": 1,
+  "station_id": "GP-REAL-002",
+  "status": "ok"
+}

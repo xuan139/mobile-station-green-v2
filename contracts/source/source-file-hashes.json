@@ -1,0 +1,238 @@
+{
+  "capture_kind": "offline_source_file_hashes",
+  "files": [
+    {
+      "path": "cloud/common/config.py",
+      "sha256": "05c417ced335e3a02cde22349bfa2e915a3c19c9dd74d6179f7d7ae9b1734815"
+    },
+    {
+      "path": "cloud/common/db.py",
+      "sha256": "7d5ce2c2df7b1dd2e5c251092453d502918e5150f619d3e4efb35b348d9129b6"
+    },
+    {
+      "path": "cloud/common/mq.py",
+      "sha256": "66237aa8b91748ae0eb017aebed2631f885c33d37b8ee0ff06672101f02d0269"
+    },
+    {
+      "path": "cloud/common/parser.py",
+      "sha256": "82e30f7ee2b664778be66e9197e820a8e1621084a449065af09476b7f4b4b052"
+    },
+    {
+      "path": "cloud/common/station_agent.py",
+      "sha256": "a8f2e987cd484920e8ee2bea34ca73f2f836f07e4297d0b086ab2603f1d77767"
+    },
+    {
+      "path": "cloud/data_access/__init__.py",
+      "sha256": "95bb1ee8b8578a7b3b073050819da12e2e2f272ea4ae159d9265c3886ec52d69"
+    },
+    {
+      "path": "cloud/data_access/access_control.py",
+      "sha256": "7938362bb2bae9ca3070783103aef2883e1901ce3b5531e259ed69131850838c"
+    },
+    {
+      "path": "cloud/data_access/alarm_records.py",
+      "sha256": "87b5075dd063004f7f675615c352e6935bffa37b648222ac68f2d1fd46c0a11e"
+    },
+    {
+      "path": "cloud/data_access/core.py",
+      "sha256": "7bb4b79d892e22d84b967ecba543ccdc9da28594e3b60a53d885098bbdc2ca12"
+    },
+    {
+      "path": "cloud/data_access/green_energy.py",
+      "sha256": "18eed8db6e67f9a43c42dcaddd1a1189f04da7587220f77c341356e6c485212b"
+    },
+    {
+      "path": "cloud/data_access/mode_schedule.py",
+      "sha256": "f04b9bf44d745a7bf564f180a20ec12b7effad1806a08db56929689e9f067793"
+    },
+    {
+      "path": "cloud/data_access/point_catalog.py",
+      "sha256": "47b1bd2cc3050ab5dae0bb77d0b406bdd9f6dda517ca7b842a54ca877ae7f6bf"
+    },
+    {
+      "path": "cloud/data_access/station_command_lifecycle.py",
+      "sha256": "5ee4d1877676ea0412bbabcd5bc4c0c88a082d7d11d31b2c0bc037d066b234be"
+    },
+    {
+      "path": "cloud/data_access/station_directory.py",
+      "sha256": "d6e7ed9e0a304f0a5441b38e55096f264c11b1fc6947365c908ed1deaddd3048"
+    },
+    {
+      "path": "cloud/data_access/station_overview.py",
+      "sha256": "79017dfed12d2f1efddc6887437540ed4a6f0d370d64006d427cae0a396ce650"
+    },
+    {
+      "path": "cloud/db/audit_log_permission_scope_20260728.sql",
+      "sha256": "8cbe42c4a4daa08a6a461dbc648928d188e438c05841104a5e2422fddc529f13"
+    },
+    {
+      "path": "cloud/db/cloud_schema_v1.sql",
+      "sha256": "6904813d6fb0d9c05dc19b1dfb3e34fbeabc5d89f2d141d309083599b7db1b59"
+    },
+    {
+      "path": "cloud/db/green_power_alarm_policy_20260713.sql",
+      "sha256": "6a80a06b9a5174c2bb4b4a511db29d4fb03dc9e756488dae0544fc5a91a68cc5"
+    },
+    {
+      "path": "cloud/db/green_power_mode_switch_schedule_20260801.sql",
+      "sha256": "9490929de760c1d9382eaaa61ff9e06615791ac8738d757c3d4aba91c829fe9b"
+    },
+    {
+      "path": "cloud/db/station_command_lifecycle_20260803.sql",
+      "sha256": "d620886512c76ea283bc24ae87f760ef5e8da91a41e36bc9c8132fca663ffad7"
+    },
+    {
+      "path": "cloud/db/telemetry_history_rollup_watermark_20260809.sql",
+      "sha256": "f6d523695006d708046bb3a1f1f32acd70ce145b387fcd0518c2f61a7afacd04"
+    },
+    {
+      "path": "cloud/deploy/systemd/mobile-station-alert-notify.service",
+      "sha256": "7a44ba245734ae474ffce614efe9f8c1bf7c3cdc47be1991856479337682740b"
+    },
+    {
+      "path": "cloud/deploy/systemd/mobile-station-alert-rules-worker.service",
+      "sha256": "0c3699142743dec8938d3ef6889e682f94ce7f3ee6e1bc35681c81df7d95f98c"
+    },
+    {
+      "path": "cloud/deploy/systemd/mobile-station-api.service",
+      "sha256": "e111a516e82e8a96c49e546e0e5e524fa2c17851cbbd6d217f174ebc66982378"
+    },
+    {
+      "path": "cloud/deploy/systemd/mobile-station-command-lifecycle-worker.service",
+      "sha256": "b3567abc3b562b5ac7e65dfdc701b5b46fcfa8171e6f96e9b70eaf2745f889d2"
+    },
+    {
+      "path": "cloud/deploy/systemd/mobile-station-db-writer.service",
+      "sha256": "59ad5a1ef74fced6a8eb6767ea62054ff97ef7719eb0d9dfd8550c356a935745"
+    },
+    {
+      "path": "cloud/deploy/systemd/mobile-station-green-power-energy-worker.service",
+      "sha256": "880f49ddbe885cf9b1945d4e0ec0ec77ca914334fca217aba057f3bb7c111bb3"
+    },
+    {
+      "path": "cloud/deploy/systemd/mobile-station-ingress.service",
+      "sha256": "fdcf288db7064bd382326608b167f193773efe02a0a5e73cd40f066975eebc6e"
+    },
+    {
+      "path": "cloud/deploy/systemd/mobile-station-mode-schedule-worker.service",
+      "sha256": "38cf0bbedad8dd4ef36de969fa5daf29d50f02b24419fb602e4a4842e08e6a98"
+    },
+    {
+      "path": "cloud/deploy/systemd/mobile-station-parser-worker.service",
+      "sha256": "d704f1f4f0dad0854550be29ac23587f62350d994fd2ab072a18377079c2883e"
+    },
+    {
+      "path": "cloud/scripts/manage_telemetry_history_storage.sh",
+      "sha256": "f64690684ec2764d88c30517434172984adc40d8f9aa6cec283fd90cb5eac167"
+    },
+    {
+      "path": "cloud/services/alert_notify/__init__.py",
+      "sha256": "aa5189c523915cd3b34ba494cd5dda6ca39540d9e049dfd4d1056833d74d0b6d"
+    },
+    {
+      "path": "cloud/services/alert_notify/main.py",
+      "sha256": "fba2a91db834b12a1f2b0bace514e10cbec612cdb0e65d17fbff04a5e28f6ca1"
+    },
+    {
+      "path": "cloud/services/alert_rules_worker/__init__.py",
+      "sha256": "ec51c588e690b085a44d0c0f961c294e1ccceacc1d47b0962a373601cac3c2cb"
+    },
+    {
+      "path": "cloud/services/alert_rules_worker/main.py",
+      "sha256": "78a43833d4fec28d48f51a601bcd04312c47557eef7dd9071c7afd15537b19e4"
+    },
+    {
+      "path": "cloud/services/api/__init__.py",
+      "sha256": "9fb001614278d7c0d817cb4c75aeefdc6c10f5ceb54ba6e76b4b6c2e9bfcca56"
+    },
+    {
+      "path": "cloud/services/api/main.py",
+      "sha256": "151df9e3d19d8ab1ab679e885eabf82b485e38181e09b4ebdbb6dc1b9083f7f7"
+    },
+    {
+      "path": "cloud/services/command_lifecycle_worker/__init__.py",
+      "sha256": "fb6c72d850acc43b0107bfaba6e49e00cc29ec4e5d3e168d65637771b8908e7a"
+    },
+    {
+      "path": "cloud/services/command_lifecycle_worker/main.py",
+      "sha256": "a7abb59fb0c92d9a38141f9799f9bf97c76a69e9026e80a214869bc6087ad322"
+    },
+    {
+      "path": "cloud/services/db_writer/__init__.py",
+      "sha256": "899b0e8e86b8ef444298de1168d8320c2b36fa0fac8b0f8af1e7c58b3dadfd80"
+    },
+    {
+      "path": "cloud/services/db_writer/main.py",
+      "sha256": "5d48f36621f341ae2e21af859942b7e79630c277a95f193b55ba8f0127c2247e"
+    },
+    {
+      "path": "cloud/services/green_power_energy_worker/__init__.py",
+      "sha256": "9c99a7cb6fecf7a9cefe30d8e07e5a7138d4190100d1ccea3595c9fb99150f80"
+    },
+    {
+      "path": "cloud/services/green_power_energy_worker/main.py",
+      "sha256": "6803ee35f34c08889cc2bb779374056e7b4893630639891f993daef47fd0c8b3"
+    },
+    {
+      "path": "cloud/services/ingress/__init__.py",
+      "sha256": "62f33f7095b2490259458de25c68320603a713bcf8f930ebb9fa4fbe2a3d0e51"
+    },
+    {
+      "path": "cloud/services/ingress/main.py",
+      "sha256": "fc2f69774ad5996d7b2e07d9f97dab7dc78fc73fe574e4240610264daf9573e5"
+    },
+    {
+      "path": "cloud/services/mode_schedule_worker/__init__.py",
+      "sha256": "ac2258cbeddb87f5046bcb8c69b95e5e7cf7e152e1d07889ae0615b986a31aa7"
+    },
+    {
+      "path": "cloud/services/mode_schedule_worker/main.py",
+      "sha256": "2dd8cc1dce5d5883da6a22e259c1834036c22300b09c222989b2a73758c09549"
+    },
+    {
+      "path": "cloud/services/parser_worker/__init__.py",
+      "sha256": "91665252924781d302a58f7b0a3945dc659fa5f69ad5550a9b7261ad356414bb"
+    },
+    {
+      "path": "cloud/services/parser_worker/main.py",
+      "sha256": "927d8c817817ff393dd9bf3161b457dd041b1deca4a9766e3531f2f33abe2664"
+    },
+    {
+      "path": "deploy/cloud/aws/systemd/mobile-station-alert-notify.service",
+      "sha256": "7a44ba245734ae474ffce614efe9f8c1bf7c3cdc47be1991856479337682740b"
+    },
+    {
+      "path": "deploy/cloud/aws/systemd/mobile-station-alert-rules-worker.service",
+      "sha256": "4be60a8ac4101dca74ec8227d4f49bbfb64e49a38cc6fec3b60ce7bad28ad642"
+    },
+    {
+      "path": "deploy/cloud/aws/systemd/mobile-station-api.service",
+      "sha256": "e111a516e82e8a96c49e546e0e5e524fa2c17851cbbd6d217f174ebc66982378"
+    },
+    {
+      "path": "deploy/cloud/aws/systemd/mobile-station-command-lifecycle-worker.service",
+      "sha256": "b3567abc3b562b5ac7e65dfdc701b5b46fcfa8171e6f96e9b70eaf2745f889d2"
+    },
+    {
+      "path": "deploy/cloud/aws/systemd/mobile-station-db-writer.service",
+      "sha256": "59ad5a1ef74fced6a8eb6767ea62054ff97ef7719eb0d9dfd8550c356a935745"
+    },
+    {
+      "path": "deploy/cloud/aws/systemd/mobile-station-ingress.service",
+      "sha256": "fdcf288db7064bd382326608b167f193773efe02a0a5e73cd40f066975eebc6e"
+    },
+    {
+      "path": "deploy/cloud/aws/systemd/mobile-station-mode-schedule-worker.service",
+      "sha256": "38cf0bbedad8dd4ef36de969fa5daf29d50f02b24419fb602e4a4842e08e6a98"
+    },
+    {
+      "path": "deploy/cloud/aws/systemd/mobile-station-parser-worker.service",
+      "sha256": "d704f1f4f0dad0854550be29ac23587f62350d994fd2ab072a18377079c2883e"
+    }
+  ],
+  "source": {
+    "archive_sha256": "0acfc9eeca10efb09eff70bb8e3731107afd96eb34a8ccda6e2ba8bc5a6bb91d",
+    "commit": "23b8274a2a708f9b8d4de2a8c46df2dc541bca6d",
+    "repository_ref": "origin/dev"
+  }
+}

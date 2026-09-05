@@ -1,0 +1,243 @@
+{
+  "capture_kind": "offline_systemd_source_manifest",
+  "limitations": [
+    "兩套來源範本可能漂移；本階段不指定其中一套為正式部署真相。",
+    "AWS 實際 unit、執行目錄及 Python 路徑仍須另行唯讀核對。"
+  ],
+  "live_systemd_verified": false,
+  "source": {
+    "archive_sha256": "0acfc9eeca10efb09eff70bb8e3731107afd96eb34a8ccda6e2ba8bc5a6bb91d",
+    "commit": "23b8274a2a708f9b8d4de2a8c46df2dc541bca6d",
+    "repository_ref": "origin/dev"
+  },
+  "units": [
+    {
+      "candidates": [
+        {
+          "description": "Mobile Station Cloud Ingress Service",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.ingress.main",
+          "exists": true,
+          "health_port": 18081,
+          "path": "cloud/deploy/systemd/mobile-station-ingress.service",
+          "sha256": "fdcf288db7064bd382326608b167f193773efe02a0a5e73cd40f066975eebc6e",
+          "working_directory": "/opt/mobile-station"
+        },
+        {
+          "description": "Mobile Station Cloud Ingress Service",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.ingress.main",
+          "exists": true,
+          "health_port": 18081,
+          "path": "deploy/cloud/aws/systemd/mobile-station-ingress.service",
+          "sha256": "fdcf288db7064bd382326608b167f193773efe02a0a5e73cd40f066975eebc6e",
+          "working_directory": "/opt/mobile-station"
+        }
+      ],
+      "health_port": 18081,
+      "unit": "mobile-station-ingress.service"
+    },
+    {
+      "candidates": [
+        {
+          "description": "Mobile Station Cloud Parser Worker",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.parser_worker.main",
+          "exists": true,
+          "health_port": 18082,
+          "path": "cloud/deploy/systemd/mobile-station-parser-worker.service",
+          "sha256": "d704f1f4f0dad0854550be29ac23587f62350d994fd2ab072a18377079c2883e",
+          "working_directory": "/opt/mobile-station"
+        },
+        {
+          "description": "Mobile Station Cloud Parser Worker",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.parser_worker.main",
+          "exists": true,
+          "health_port": 18082,
+          "path": "deploy/cloud/aws/systemd/mobile-station-parser-worker.service",
+          "sha256": "d704f1f4f0dad0854550be29ac23587f62350d994fd2ab072a18377079c2883e",
+          "working_directory": "/opt/mobile-station"
+        }
+      ],
+      "health_port": 18082,
+      "unit": "mobile-station-parser-worker.service"
+    },
+    {
+      "candidates": [
+        {
+          "description": "Mobile Station Cloud DB Writer",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.db_writer.main",
+          "exists": true,
+          "health_port": 18083,
+          "path": "cloud/deploy/systemd/mobile-station-db-writer.service",
+          "sha256": "59ad5a1ef74fced6a8eb6767ea62054ff97ef7719eb0d9dfd8550c356a935745",
+          "working_directory": "/opt/mobile-station"
+        },
+        {
+          "description": "Mobile Station Cloud DB Writer",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.db_writer.main",
+          "exists": true,
+          "health_port": 18083,
+          "path": "deploy/cloud/aws/systemd/mobile-station-db-writer.service",
+          "sha256": "59ad5a1ef74fced6a8eb6767ea62054ff97ef7719eb0d9dfd8550c356a935745",
+          "working_directory": "/opt/mobile-station"
+        }
+      ],
+      "health_port": 18083,
+      "unit": "mobile-station-db-writer.service"
+    },
+    {
+      "candidates": [
+        {
+          "description": "Mobile Station Cloud Alert Notify",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.alert_notify.main",
+          "exists": true,
+          "health_port": 18084,
+          "path": "cloud/deploy/systemd/mobile-station-alert-notify.service",
+          "sha256": "7a44ba245734ae474ffce614efe9f8c1bf7c3cdc47be1991856479337682740b",
+          "working_directory": "/opt/mobile-station"
+        },
+        {
+          "description": "Mobile Station Cloud Alert Notify",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.alert_notify.main",
+          "exists": true,
+          "health_port": 18084,
+          "path": "deploy/cloud/aws/systemd/mobile-station-alert-notify.service",
+          "sha256": "7a44ba245734ae474ffce614efe9f8c1bf7c3cdc47be1991856479337682740b",
+          "working_directory": "/opt/mobile-station"
+        }
+      ],
+      "health_port": 18084,
+      "unit": "mobile-station-alert-notify.service"
+    },
+    {
+      "candidates": [
+        {
+          "description": "Mobile Station Cloud API Service",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.api.main",
+          "exists": true,
+          "health_port": 18085,
+          "path": "cloud/deploy/systemd/mobile-station-api.service",
+          "sha256": "e111a516e82e8a96c49e546e0e5e524fa2c17851cbbd6d217f174ebc66982378",
+          "working_directory": "/opt/mobile-station"
+        },
+        {
+          "description": "Mobile Station Cloud API Service",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.api.main",
+          "exists": true,
+          "health_port": 18085,
+          "path": "deploy/cloud/aws/systemd/mobile-station-api.service",
+          "sha256": "e111a516e82e8a96c49e546e0e5e524fa2c17851cbbd6d217f174ebc66982378",
+          "working_directory": "/opt/mobile-station"
+        }
+      ],
+      "health_port": 18085,
+      "unit": "mobile-station-api.service"
+    },
+    {
+      "candidates": [
+        {
+          "description": "Mobile Station Cloud Alert Rules Worker",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.alert_rules_worker.main",
+          "exists": true,
+          "health_port": 18087,
+          "path": "cloud/deploy/systemd/mobile-station-alert-rules-worker.service",
+          "sha256": "0c3699142743dec8938d3ef6889e682f94ce7f3ee6e1bc35681c81df7d95f98c",
+          "working_directory": "/opt/mobile-station"
+        },
+        {
+          "description": "Mobile Station Cloud Alert Rules Worker",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.alert_rules_worker.main",
+          "exists": true,
+          "health_port": 18087,
+          "path": "deploy/cloud/aws/systemd/mobile-station-alert-rules-worker.service",
+          "sha256": "4be60a8ac4101dca74ec8227d4f49bbfb64e49a38cc6fec3b60ce7bad28ad642",
+          "working_directory": "/opt/mobile-station"
+        }
+      ],
+      "health_port": 18087,
+      "unit": "mobile-station-alert-rules-worker.service"
+    },
+    {
+      "candidates": [
+        {
+          "description": "Mobile Station Green Power Energy Accumulator Worker",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/usr/bin/python3 -m cloud.services.green_power_energy_worker.main",
+          "exists": true,
+          "health_port": 18088,
+          "path": "cloud/deploy/systemd/mobile-station-green-power-energy-worker.service",
+          "sha256": "880f49ddbe885cf9b1945d4e0ec0ec77ca914334fca217aba057f3bb7c111bb3",
+          "working_directory": "/opt/mobile-station"
+        },
+        {
+          "exists": false,
+          "path": "deploy/cloud/aws/systemd/mobile-station-green-power-energy-worker.service"
+        }
+      ],
+      "health_port": 18088,
+      "unit": "mobile-station-green-power-energy-worker.service"
+    },
+    {
+      "candidates": [
+        {
+          "description": "Mobile Station Green Power Automatic Mode Switch Worker",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/opt/mobile-station-cloud/.venv/bin/python -m cloud.services.mode_schedule_worker.main",
+          "exists": true,
+          "health_port": 18089,
+          "path": "cloud/deploy/systemd/mobile-station-mode-schedule-worker.service",
+          "sha256": "38cf0bbedad8dd4ef36de969fa5daf29d50f02b24419fb602e4a4842e08e6a98",
+          "working_directory": "/opt/mobile-station-cloud"
+        },
+        {
+          "description": "Mobile Station Green Power Automatic Mode Switch Worker",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/opt/mobile-station-cloud/.venv/bin/python -m cloud.services.mode_schedule_worker.main",
+          "exists": true,
+          "health_port": 18089,
+          "path": "deploy/cloud/aws/systemd/mobile-station-mode-schedule-worker.service",
+          "sha256": "38cf0bbedad8dd4ef36de969fa5daf29d50f02b24419fb602e4a4842e08e6a98",
+          "working_directory": "/opt/mobile-station-cloud"
+        }
+      ],
+      "health_port": 18089,
+      "unit": "mobile-station-mode-schedule-worker.service"
+    },
+    {
+      "candidates": [
+        {
+          "description": "Mobile Station Command Lifecycle Worker",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/opt/mobile-station-cloud/.venv/bin/python -m cloud.services.command_lifecycle_worker.main",
+          "exists": true,
+          "health_port": 18090,
+          "path": "cloud/deploy/systemd/mobile-station-command-lifecycle-worker.service",
+          "sha256": "b3567abc3b562b5ac7e65dfdc701b5b46fcfa8171e6f96e9b70eaf2745f889d2",
+          "working_directory": "/opt/mobile-station-cloud"
+        },
+        {
+          "description": "Mobile Station Command Lifecycle Worker",
+          "environment_file": "/etc/mobile-station-cloud/common.env",
+          "exec_start": "/opt/mobile-station-cloud/.venv/bin/python -m cloud.services.command_lifecycle_worker.main",
+          "exists": true,
+          "health_port": 18090,
+          "path": "deploy/cloud/aws/systemd/mobile-station-command-lifecycle-worker.service",
+          "sha256": "b3567abc3b562b5ac7e65dfdc701b5b46fcfa8171e6f96e9b70eaf2745f889d2",
+          "working_directory": "/opt/mobile-station-cloud"
+        }
+      ],
+      "health_port": 18090,
+      "unit": "mobile-station-command-lifecycle-worker.service"
+    }
+  ]
+}

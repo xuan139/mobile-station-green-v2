@@ -1,0 +1,26 @@
+{
+  "message_id": "test-green-power-main",
+  "message_type": "ack",
+  "pending_command": {
+    "attempt_count": 1,
+    "command_id": "cmd-contract-001",
+    "command_type": "write_registers",
+    "delivery_lease_until": "2026-06-24T14:21:31+08:00",
+    "delivery_protocol_version": 2,
+    "device_id": "GP-REAL-002-INV",
+    "expire_at": "2026-06-24T14:26:00+08:00",
+    "issued_at": "2026-06-24T14:20:59+08:00",
+    "last_sequence": 1,
+    "payload": {
+      "address": 1,
+      "function_code": 6,
+      "value": 2
+    },
+    "station_id": "GP-REAL-002",
+    "station_name": "北_新北_土城基地台2"
+  },
+  "received_at": "2026-06-24T14:21:01.100000+08:00",
+  "sequence": 1,
+  "station_id": "GP-REAL-002",
+  "status": "ok"
+}

@@ -1,0 +1,26 @@
+{
+  "capture_kind": "offline_cron_source_manifest",
+  "live_cron_verified": false,
+  "modes": [
+    "rebuild-empty",
+    "ensure-partitions",
+    "rollup",
+    "rollup-5m",
+    "rollup-15m",
+    "rollup-1h",
+    "prune"
+  ],
+  "required_semantics": [
+    "advisory transaction lock",
+    "atomic rollup and watermark commit",
+    "idempotent rerun",
+    "sample_count conservation"
+  ],
+  "script": "cloud/scripts/manage_telemetry_history_storage.sh",
+  "sha256": "f64690684ec2764d88c30517434172984adc40d8f9aa6cec283fd90cb5eac167",
+  "source": {
+    "archive_sha256": "0acfc9eeca10efb09eff70bb8e3731107afd96eb34a8ccda6e2ba8bc5a6bb91d",
+    "commit": "23b8274a2a708f9b8d4de2a8c46df2dc541bca6d",
+    "repository_ref": "origin/dev"
+  }
+}

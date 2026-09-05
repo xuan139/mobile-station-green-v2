@@ -8,6 +8,9 @@ source_baseline:
   local_branch: dev
   local_commit: 25572ae90542c5265b14a49dd867456040c60ddc
   origin_dev_commit: 23b8274a2a708f9b8d4de2a8c46df2dc541bca6d
+  selected_offline_source_ref: origin/dev
+  source_archive_sha256: 0acfc9eeca10efb09eff70bb8e3731107afd96eb34a8ccda6e2ba8bc5a6bb91d
+  offline_source_contracts_captured: true
   local_divergence:
     ahead: 1
     behind: 2
@@ -103,6 +106,16 @@ compatibility_gates:
   - freeze_worker_state_transitions
   - freeze_systemd_and_cron_manifests
   - verify_old_and_v2_results_with_identical_replay
+
+capture_progress:
+  api_route_inventory: offline_source_captured
+  telemetry_and_ack_examples: offline_source_captured
+  database_source_ddl: offline_source_captured_live_schema_pending
+  systemd_templates: offline_source_captured_live_units_pending
+  cron_script: offline_source_captured_live_crontab_pending
+  rabbitmq_live_topology: pending
+  aws_deployed_commit: pending
+  old_v2_replay_comparison: pending
 
 known_drift:
   - >-

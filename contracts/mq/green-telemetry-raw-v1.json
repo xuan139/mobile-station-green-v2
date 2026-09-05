@@ -1,0 +1,17 @@
+{
+  "collected_at": "2026-06-24T14:21:00+08:00",
+  "device_id": "GP-REAL-002-INV",
+  "message_id": "test-green-power-main",
+  "message_type": "telemetry",
+  "payload": {
+    "address": 480,
+    "count": 41,
+    "function_code": 4,
+    "registers": [22000, 0, 1500, 0, 320, 0, 0, 0, 0, 8123, 9750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 123, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "protocol_type": "green_power_v20260428",
+  "received_at": "2026-06-24T14:21:01+08:00",
+  "sequence": 1,
+  "station_id": "GP-REAL-002",
+  "station_name": "北_新北_土城基地台2"
+}

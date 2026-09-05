@@ -1,0 +1,499 @@
+{
+  "capture_kind": "offline_source_schema_fingerprint",
+  "limitations": [
+    "此清單只證明來源檔內容，不代表 AWS 實際資料庫 schema。",
+    "正式相容驗收仍須另行擷取唯讀 live schema fingerprint。"
+  ],
+  "live_schema_verified": false,
+  "runtime_ddl_sources": [
+    {
+      "ddl_fragments": [
+        {
+          "line": 2267,
+          "sha256": "4f1149371d38bd486b498665f0f264663a51276589b1ff1a3c2e9b669971c3a8",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 2294,
+          "sha256": "45455aa7201ea155e859c204cd1070146e51266e23f6d471d3c6aedf89bd3106",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2300,
+          "sha256": "561ad836514015ac8b0f7acd59db580aad6ad0ec6bf528409611b963dacfee42",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 2314,
+          "sha256": "f9f7ff0e85cb1b376e94daf7fc78a40a4136553d7567223af352b98f8376d438",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 5876,
+          "sha256": "cc9679644b17b9327cc06d1c8f5429d18ab53cac315560eaeb8e33b3010babf0",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 5899,
+          "sha256": "a243e3fed1285dbc046010d40972caaa4a4e54a5eb6ac0f0096da914f62eaa0d",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 5901,
+          "sha256": "10f71ff01fe06957801ff6b8662992f5185ec2d302d06fe27789668b59566b63",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 5977,
+          "sha256": "bcb39a73841bc489ac42ac90912170e71cc3c2575bc4d97de363c658e96d4e46",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 5983,
+          "sha256": "0a7ccfa1a232bc8f56dcec663e3519e7370d8d61138b1df9e7e9dc24c36bbde3",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 9584,
+          "sha256": "8975f9d6da0e3a887eea7bec62294d71ec83b3164b7af23a9723e087f6c787ec",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 9602,
+          "sha256": "5abcb79bb4e875382cf1ac31914e5eea4a6d39361ae52f0570e06ffe22f76853",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 5975,
+          "sha256": "df989f70a5b85edad2a33d04292ee94dfac1eafe162ba7c819164071fc8f08bb",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        }
+      ],
+      "path": "cloud/common/db.py",
+      "source_sha256": "7d5ce2c2df7b1dd2e5c251092453d502918e5150f619d3e4efb35b348d9129b6"
+    },
+    {
+      "ddl_fragments": [
+        {
+          "line": 1118,
+          "sha256": "82e69d903a1cc49e9e5d5a3f3b5cc342eb8310bc031a43be12391d35200c46b2",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 1132,
+          "sha256": "16f42d89c74cc3ddd49272828c6511eae046e5a89f18d20b53e23676a7118ec6",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 1148,
+          "sha256": "cbbc2c8a220c40f8d7ce3cacf215edfb8aea2d3b40fcc71f036e6483add451ac",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 1158,
+          "sha256": "1a12954801215d174daa7fc0af61c0020b5e2930feb9f1bb9a0fb915606114f1",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 1181,
+          "sha256": "8cab35d69668828c406c7c80bff6b458661b705b6ac56e587e15af822254cf21",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 1187,
+          "sha256": "53b29dfa56a491efe86d90342b8b50089316ee984e92a8c475d7761ba09ef997",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 1193,
+          "sha256": "b83ca196e64982b311091d47301b652c0ac26d138e4c886e40fe6c59ae8f5027",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 1396,
+          "sha256": "4ce149a1cb83c5f560ef1d39c36561aceac84ed9bce7366af4bed7f315706a05",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 1415,
+          "sha256": "a4ddca47d604eab55f26dd7bdf2b7178f081695e38b73fd6a864251f4beaf93f",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 1421,
+          "sha256": "747cecfdcb81fc96737a58e193d9644b494e197730695d94b5c76ddb1594a353",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 1795,
+          "sha256": "27b772907b9e13fdf8a4eb0b5d900aacd0ddc4ddc2ecfbc52f3ba5ee50399a57",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1800,
+          "sha256": "2b159ccf0d8dfb1deb9b9bb6615346524d7be1afa5bfb990c54a4971e51e2992",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1801,
+          "sha256": "f8ab63bfcbb3c1d46abc48734c0e3eb4237ba68f12a0bf068acc7c58e7839a22",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1802,
+          "sha256": "68181fbe33b317b2ab6075c1073084f157b31a80800e7a4b09e868d3ad153034",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1803,
+          "sha256": "e9401ac0f897fb46aa858bebead0c2777825074a5588172356c0ca85d0e70687",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1804,
+          "sha256": "06b0a718a51cc042cc5027d0699b177650222c9d036f641ba8b456222f871b23",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1806,
+          "sha256": "1e84e1e23b6eb7c33d3b5ca7c528c07ca4805b2cff0408a93eb064c976ca216d",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1812,
+          "sha256": "85033cb752d8f773048630c76d5798a7f5466823bfc0fdc8bf21320a6370af2d",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1827,
+          "sha256": "cb98f9c93592f98e07d59d48e9d9adf49391e87f5922984f28f8904bbc7d0ebd",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1833,
+          "sha256": "5d5b730e8f20518120b38d061519cd98ffe5bab412b8f3416e74ee95c8e88b23",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 1848,
+          "sha256": "49029b966828394243d214fae5bc89cded922e7c4ff9499ee49614ddcbed6930",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 1854,
+          "sha256": "dc87ed83f679cff0f7a277de2dc50939ae3d8672208aaa5fcfa817107f2cab22",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 1860,
+          "sha256": "c0590402fff10a417b9c6f0287679a9f20615dc5a473a082360d3c5727c8e2ca",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2024,
+          "sha256": "9384bc36395f80f411aa680add5ae9c3b1461d9d50419ce2183d2c6a18df7acc",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 2030,
+          "sha256": "794bceef81bb6972743887d06441ea19f7e8ff4803faae0117ee62cabd1e15f9",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 2036,
+          "sha256": "fe31a500c1edb2b67ab9cb3242d92a5add10d1148d86e7e06c1bffe03fdf86cc",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 2728,
+          "sha256": "871c6f4dc19a8e065e06066c0cbf2b378904a708fbff801697f01b4f3f126385",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 2758,
+          "sha256": "1d390c3a735d6d43a4a930d1cd51e3ca6c7d4bee4d00ade9cb4ffb0709540c08",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2759,
+          "sha256": "b44fca75da46cf7ba894db4a9746362d6368236d93014a956ba21edb21a8110d",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2760,
+          "sha256": "f16a062e3633e98bd40c1ca7e476d8188ce550f17219dd97853ebee27b1297dd",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2761,
+          "sha256": "21ed30cc3df451deae85c2bc39ce0aaf233ea825eba1e76f21d804e3d761d649",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2762,
+          "sha256": "c92ffa6633ac1a0190f552dc7bacb20579a0d2b50a8b284af5b0da2c404c1f8b",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2763,
+          "sha256": "07f3a460efc28fd06e3942e12dae54763f8158abf9b1e9cd6fdd2c536d81fa86",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2764,
+          "sha256": "cbaabf3e9f83a94bc483e26c442cba1444ddefc53a23b41f85259e4f0fc3eb2f",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2765,
+          "sha256": "d606c1968223c68e67d35e47af5a38ca3a587ff5d0598e23c69dc5c1ae73c65b",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 2767,
+          "sha256": "98f3b52aa997c270a3dcf4e0f56c09275e358239625ba4876d7a5281f302d89a",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 2782,
+          "sha256": "925c2a5e26620dbc60a6459d169314b66647d90c44a17158f8a4c702ccdeb8c9",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        }
+      ],
+      "path": "cloud/data_access/access_control.py",
+      "source_sha256": "7938362bb2bae9ca3070783103aef2883e1901ce3b5531e259ed69131850838c"
+    },
+    {
+      "ddl_fragments": [
+        {
+          "line": 77,
+          "sha256": "97e1e2f20ff0999481cbab7f07da876e10c40a85273a009310a03216bd2cfac7",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 92,
+          "sha256": "ef3434af4b60e34e6fd36fba2fef98c7fe3153c90a2d2680fc0fdaadf07e5343",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        }
+      ],
+      "path": "cloud/data_access/alarm_records.py",
+      "source_sha256": "87b5075dd063004f7f675615c352e6935bffa37b648222ac68f2d1fd46c0a11e"
+    },
+    {
+      "ddl_fragments": [
+        {
+          "line": 288,
+          "sha256": "978d71c1c12c35ff7d86d7d1b1aabb4abc626043a409566c87bc5a100451c1ec",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 316,
+          "sha256": "5e62f8ebcc2f4383c587c9916b0cfdba1f3274111ee18caa7de2f94484880606",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 322,
+          "sha256": "25fff1a4d944f8e84c5920a279f6b96ff6476cfd2f80ed33e73ee739c10d39e2",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 712,
+          "sha256": "4bd65ae002239ad30c01a42cb401383b9099ba6b43df818ee8a029b443759670",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 728,
+          "sha256": "3efee12a7818623aa9f4efc7047e8036f57c2d0a7731c03acdb5ef5e4f408031",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 745,
+          "sha256": "5369e00eed00950da5df3b9e449fb78fb27ef7a3219ac4b9a7fc6a4a60c3c975",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        },
+        {
+          "line": 751,
+          "sha256": "3e699df5354efbd9823f8c4e6c4935b738892a3b92403ee1378cac3ba418a841",
+          "statement_kinds": [
+            "CREATE INDEX"
+          ]
+        }
+      ],
+      "path": "cloud/data_access/green_energy.py",
+      "source_sha256": "18eed8db6e67f9a43c42dcaddd1a1189f04da7587220f77c341356e6c485212b"
+    },
+    {
+      "ddl_fragments": [
+        {
+          "line": 107,
+          "sha256": "d41ee04ff0b4c2f096daf79b8bf78872d1043d9e370a6d42a83db4b6dfbeff3e",
+          "statement_kinds": [
+            "ALTER TABLE"
+          ]
+        },
+        {
+          "line": 157,
+          "sha256": "0482a80d4e702b6f93d19babe4db37d2e1da5cfcab282d179db05d03620e8b8e",
+          "statement_kinds": [
+            "CREATE INDEX",
+            "CREATE TABLE"
+          ]
+        },
+        {
+          "line": 211,
+          "sha256": "4e472319dd9d3031ce35ef582f65f303113565f497a9989ce9eca982b7ed42b6",
+          "statement_kinds": [
+            "CREATE TABLE"
+          ]
+        }
+      ],
+      "path": "cloud/data_access/station_directory.py",
+      "source_sha256": "d6e7ed9e0a304f0a5441b38e55096f264c11b1fc6947365c908ed1deaddd3048"
+    }
+  ],
+  "source": {
+    "archive_sha256": "0acfc9eeca10efb09eff70bb8e3731107afd96eb34a8ccda6e2ba8bc5a6bb91d",
+    "commit": "23b8274a2a708f9b8d4de2a8c46df2dc541bca6d",
+    "repository_ref": "origin/dev"
+  },
+  "static_sql_files": [
+    {
+      "path": "cloud/db/audit_log_permission_scope_20260728.sql",
+      "sha256": "8cbe42c4a4daa08a6a461dbc648928d188e438c05841104a5e2422fddc529f13"
+    },
+    {
+      "path": "cloud/db/cloud_schema_v1.sql",
+      "sha256": "6904813d6fb0d9c05dc19b1dfb3e34fbeabc5d89f2d141d309083599b7db1b59"
+    },
+    {
+      "path": "cloud/db/green_power_alarm_policy_20260713.sql",
+      "sha256": "6a80a06b9a5174c2bb4b4a511db29d4fb03dc9e756488dae0544fc5a91a68cc5"
+    },
+    {
+      "path": "cloud/db/green_power_mode_switch_schedule_20260801.sql",
+      "sha256": "9490929de760c1d9382eaaa61ff9e06615791ac8738d757c3d4aba91c829fe9b"
+    },
+    {
+      "path": "cloud/db/station_command_lifecycle_20260803.sql",
+      "sha256": "d620886512c76ea283bc24ae87f760ef5e8da91a41e36bc9c8132fca663ffad7"
+    },
+    {
+      "path": "cloud/db/telemetry_history_rollup_watermark_20260809.sql",
+      "sha256": "f6d523695006d708046bb3a1f1f32acd70ce145b387fcd0518c2f61a7afacd04"
+    }
+  ]
+}

@@ -116,6 +116,7 @@ capture_progress:
   rabbitmq_live_topology: pending
   aws_deployed_commit: pending
   old_v2_replay_comparison: pending
+  telemetry_vertical_slice: locally_implemented_fc4_0x1e0_runtime_wiring_pending
 
 known_drift:
   - >-

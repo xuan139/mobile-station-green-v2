@@ -1,7 +1,7 @@
 # 綠能 V2 階段 0／1 實作記錄
 
 日期：2026-09-05
-狀態：本機隔離骨架已建立，等待完整依賴測試與 Git 提交
+狀態：本機隔離骨架已建立並通過健康契約測試
 
 ## 目標
 
@@ -59,5 +59,10 @@ ledger、具可控故障點的 Modbus／MQ 模擬器、命令 correlation 與冪
 
 - Green V2 `src/` 與 `tests/` Python compile：通過。
 - BXSJ V2 隔離測試：2／2 通過。
-- Green V2 FastAPI 契約測試：等待建立獨立 venv 並安裝鎖定範圍內依賴。
+- Green V2 FastAPI／設定／隔離測試：8／8 通過，另有兩個第三方棄用警告。
+- Green V2 `/health`、`/ready`、`/api/v1/ping` smoke test：3／3 通過。
+- 本機 FastAPI 開發服務使用 `127.0.0.1:28000`，未占用舊系統埠。
+- 這台 Mac 未安裝 Docker，因此 Compose 尚未做語法驗證或啟動。
 - 未啟動 Docker、未連接任何舊或正式資料資源。
+
+詳細環境、套件版本、輸出及未執行項目見 `local-verification.zh-TW.md`。

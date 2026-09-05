@@ -33,5 +33,8 @@ agents:
     report: test-deployment-analysis.zh-TW.md
 verification:
   python_compile: passed
-  green_v2_tests: pending_dependency_install
+  green_v2_tests: passed_8_of_8
+  green_v2_test_warnings: 2_dependency_deprecations
+  api_smoke_test: passed_3_of_3
+  compose_validation: not_run_docker_unavailable
   bxsj_v2_isolation_tests: passed_2_of_2

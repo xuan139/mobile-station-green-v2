@@ -4,6 +4,14 @@ from collections.abc import Callable, Mapping
 from typing import Any
 
 from green_v2.domain.telemetry_message import utc_now_iso, validate_telemetry_message
+from green_v2.parser.battery_pack import PACK_BASES, parse_pack_alarms, parse_pack_metrics
+from green_v2.parser.control_schedule import (
+    CONTROL_ADDRESS,
+    EXTRA_CONTROL_ADDRESS,
+    parse_control_schedule,
+    parse_extra_control,
+)
+from green_v2.parser.controller_status import CONTROLLER_STATUS_ADDRESS, parse_controller_bits
 from green_v2.parser.main_status import MAIN_STATUS_ADDRESS, parse_main_status
 
 
@@ -44,6 +52,16 @@ def _parse_metric_groups(
 ) -> list[dict[str, Any]]:
     if function_code == 4 and address == MAIN_STATUS_ADDRESS:
         return [parse_main_status(payload["registers"], device_id)]
+    if function_code == 4 and address in PACK_BASES:
+        return [parse_pack_metrics(payload["registers"], PACK_BASES[address])]
+    if function_code == 2 and address in PACK_BASES:
+        return [parse_pack_alarms(payload["bits"], PACK_BASES[address])]
+    if function_code == 2 and address == CONTROLLER_STATUS_ADDRESS:
+        return [parse_controller_bits(payload["bits"], device_id)]
+    if function_code == 3 and address == CONTROL_ADDRESS:
+        return [parse_control_schedule(payload["registers"], device_id)]
+    if function_code == 3 and address == EXTRA_CONTROL_ADDRESS:
+        return [parse_extra_control(payload["registers"], device_id)]
     return [
         {
             "source_type": "device",

@@ -1,0 +1,38 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: mobile_station_green_v2
+      POSTGRES_USER: green_v2
+      POSTGRES_PASSWORD: green_v2_local_only
+    ports:
+      - "127.0.0.1:55432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U green_v2 -d mobile_station_green_v2"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - green_v2_postgres:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: green_v2
+      RABBITMQ_DEFAULT_PASS: green_v2_local_only
+      RABBITMQ_DEFAULT_VHOST: /green-v2
+    ports:
+      - "127.0.0.1:55672:5672"
+      - "127.0.0.1:55673:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    volumes:
+      - green_v2_rabbitmq:/var/lib/rabbitmq
+
+volumes:
+  green_v2_postgres:
+  green_v2_rabbitmq:
+

@@ -1,0 +1,37 @@
+project: green-v2
+date: 2026-09-05
+language: zh-TW
+status: local_skeleton_ready
+old_repository:
+  path: /Users/lijiaxi/Documents/mobile station
+  mode: read_only
+new_repository:
+  path: /Users/lijiaxi/Documents/mobile-station-green-v2
+  branch: dev
+external_writes:
+  github_created: false
+  aws_changed: false
+  production_database_changed: false
+  production_mq_changed: false
+  device_changed: false
+agents:
+  - role: api_contract_analyst
+    mode: read_only
+    status: completed
+    report: api-contract-analysis.zh-TW.md
+  - role: database_analyst
+    mode: read_only
+    status: completed
+    report: database-analysis.zh-TW.md
+  - role: telemetry_command_analyst
+    mode: read_only
+    status: completed
+    report: telemetry-command-analysis.zh-TW.md
+  - role: qa_deployment_analyst
+    mode: read_only
+    status: completed
+    report: test-deployment-analysis.zh-TW.md
+verification:
+  python_compile: passed
+  green_v2_tests: pending_dependency_install
+  bxsj_v2_isolation_tests: passed_2_of_2

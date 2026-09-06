@@ -118,6 +118,7 @@ capture_progress:
   old_v2_replay_comparison: pending
   telemetry_vertical_slice: locally_implemented_fc4_0x1e0_runtime_wiring_pending
   green_parser_all_routes: locally_implemented_16_golden_cases_passed
+  ingress_parser_runtime: locally_implemented_loopback_and_mock_verified
 
 known_drift:
   - >-

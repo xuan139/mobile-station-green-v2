@@ -30,12 +30,17 @@ class IngestTelemetry:
             pending_command=pending_command,
         )
 
-    def reject(self, message: Mapping[str, Any] | None, error: Exception) -> dict[str, Any]:
+    def reject(
+        self,
+        message: Mapping[str, Any] | None,
+        error: Exception,
+        error_code: str = "INVALID_PAYLOAD",
+    ) -> dict[str, Any]:
         return build_ack(
             message,
             status="reject",
             received_at=self.clock(),
-            error_code="INVALID_PAYLOAD",
+            error_code=error_code,
             error_message=str(error),
         )
 

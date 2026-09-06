@@ -16,6 +16,8 @@ class SettingsTests(TestCase):
         self.assertEqual(settings.ingress_bind_port, 29000)
         self.assertEqual(settings.health_bind_port, 28080)
         self.assertEqual(settings.worker_prefetch, 50)
+        self.assertEqual(settings.db_writer_max_retries, 3)
+        self.assertEqual(settings.mq_queue_dlq, "green_v2.dlq")
 
     def test_service_health_ports_are_isolated(self) -> None:
         with mock.patch.dict(os.environ, {}, clear=True):

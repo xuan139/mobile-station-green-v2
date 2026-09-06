@@ -46,8 +46,10 @@ class Settings:
     mq_queue_raw: str
     mq_queue_parsed: str
     mq_queue_failed: str
+    mq_queue_dlq: str
     worker_prefetch: int
     worker_poll_seconds: int
+    db_writer_max_retries: int
 
     @classmethod
     def from_env(cls, service_name: str = "api") -> "Settings":
@@ -81,8 +83,10 @@ class Settings:
             mq_queue_raw=_text("MQ_QUEUE_RAW", "green_v2.raw.telemetry"),
             mq_queue_parsed=_text("MQ_QUEUE_PARSED", "green_v2.parsed.telemetry"),
             mq_queue_failed=_text("MQ_QUEUE_FAILED", "green_v2.failed"),
+            mq_queue_dlq=_text("MQ_QUEUE_DLQ", "green_v2.dlq"),
             worker_prefetch=_integer("WORKER_PREFETCH", 50),
             worker_poll_seconds=_integer("WORKER_POLL_SECONDS", 1),
+            db_writer_max_retries=_integer("DB_WRITER_MAX_RETRIES", 3),
         )
         settings.assert_isolated()
         return settings
@@ -103,6 +107,8 @@ class Settings:
             errors.append("DB_POOL_MAX_SIZE 不得小於 DB_POOL_MIN_SIZE")
         if self.worker_prefetch < 1:
             errors.append("WORKER_PREFETCH 必須大於 0")
+        if self.db_writer_max_retries < 1:
+            errors.append("DB_WRITER_MAX_RETRIES 必須大於 0")
         if self.ingress_max_connections < 1:
             errors.append("INGRESS_MAX_CONNECTIONS 必須大於 0")
         if self.ingress_max_line_bytes < 128:

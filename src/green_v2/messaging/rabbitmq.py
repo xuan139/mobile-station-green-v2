@@ -201,8 +201,14 @@ class RabbitMqConsumer:
             _close_safely(self._connection)
         self._connection = None
 
-def _queue_names(settings: Settings) -> tuple[str, str, str]:
-    return settings.mq_queue_raw, settings.mq_queue_parsed, settings.mq_queue_failed
+
+def _queue_names(settings: Settings) -> tuple[str, str, str, str]:
+    return (
+        settings.mq_queue_raw,
+        settings.mq_queue_parsed,
+        settings.mq_queue_failed,
+        settings.mq_queue_dlq,
+    )
 
 
 def _close_safely(target: Any) -> None:

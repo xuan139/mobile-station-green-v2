@@ -28,6 +28,7 @@ def test_publisher_declares_durable_queues_and_persistent_messages() -> None:
         "green_v2.raw.telemetry",
         "green_v2.parsed.telemetry",
         "green_v2.failed",
+        "green_v2.dlq",
     }
     assert all(call.kwargs["durable"] is True for call in channel.queue_declare.call_args_list)
     publish = channel.basic_publish.call_args.kwargs
